@@ -12,8 +12,8 @@ function App() {
   
        <Routes>
         <Route path='/' element={<Home/>}></Route>
-        <Route path='/blog/:blogId' element={<Details />}></Route>
-        <Route path='/news' element={<Postroute/>}></Route>
+        <Route path='/news/:Blogid' element={<Details />}></Route>
+        <Route path='/post' element={<Postroute/>}></Route>
        </Routes>
        
     </div>

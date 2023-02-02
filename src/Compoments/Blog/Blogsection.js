@@ -1,22 +1,22 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import img from "../../img/1 (2).png"
+
 import "./Blogsection.css"
 
 const Blogsection = ({bloglists}) => {
-    const {title,body,id}=bloglists
+    const {name,details,_id,img}=bloglists
     const navigate=useNavigate()
-    const blogdetails=(_id)=>{
-      navigate(`/blog/${id}`)
+    const blogdetails=(id)=>{
+      navigate(`/news/${id}`)
     }
     return (
         
             <div class="col pt-5">
      
       <img src={img} className="thumbail-blog"></img>
-        <h2 class="card-title">{title}</h2>
-        <p class="card-text">{body}</p>
-        <button onClick={()=>blogdetails(id)} className='btn btn-primary rounded-pill ms-auto'>Read More</button>
+        <h2 class="card-title pe-5 pt-2 pb-2">{name}</h2>
+        <p class="card-text pe-4">{details.slice(0,505)}</p>
+        <button onClick={()=>blogdetails(_id)} className='btn btn-primary rounded-pill ms-auto'>Read More</button>
     
     </div>
          
