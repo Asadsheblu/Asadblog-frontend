@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const Post = ({posts}) => {
-    const {_id,name,details,img}=posts
+    const {_id,name,details,img,author}=posts
     const navigate=useNavigate()
    const blogdetails=(id)=>{
      navigate(`/news/${id}`)
@@ -14,9 +14,9 @@ const Post = ({posts}) => {
         </div>
         <div className='col-md-7'>
             <h2 className='fw-bold headline-title'>{name}</h2>
-            <p className='pt-2'>{details.slice(0,505,)}</p>
+            <p className='pt-2'>{details.slice(0,500,)}...</p>
             <div className='d-flex ms-auto'>
-               <p> Moneday 2023</p>
+               <p className='fw-bold'>Author:{author}</p>
                <button onClick={()=>blogdetails(_id)} className='btn btn-primary ms-auto'>Read More</button>
             </div>
         </div>

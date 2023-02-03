@@ -1,10 +1,11 @@
-import logo from './logo.svg';
+
 import './App.css';
-import Navbar from './Compoments/Navbar/Navbar';
+
 import Home from './Compoments/Home/Home';
 import { Route, Routes } from 'react-router-dom';
 import Details from './Compoments/Blog/Details';
 import Postroute from './Compoments/Blog/Postroute';
+import Allblog from './Compoments/Blog/Allblog';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path='/' element={<Home/>}></Route>
         <Route path='/news/:Blogid' element={<Details />}></Route>
         <Route path='/post' element={<Postroute/>}></Route>
+        <Route path='/blogs' element={<Allblog/>}></Route>
        </Routes>
        
     </div>

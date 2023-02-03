@@ -3,9 +3,24 @@
     color: #336CF9;
 }
 .headline-title{
-    font-size: 45px;
+    font-size: 35px;
 }
 .thumbail{
-    width: 350px;
-    height: 220px;
+    width: 370px;
+    height: 230px;
 }
+.shop{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+   .post{
+    max-width: 100%;
+   }
+   .shop{
+    display: grid!important;
+    grid-template-columns: 1fr!important;
+}
+    }
+    

@@ -15,11 +15,16 @@ const Details = () => {
         <div className='container-fluid bg-primary'>
            <div className='container p-5'>
            <h2 className='text-center text-white p-5'>{details?.name}</h2>
-           <p className='text-center text-white pb-5'>In Social Announcement/October 19,2023 / 2 min Read</p>
+       
+         
            </div>
 
         </div>
         <div className='container bg-light shadow news'>
+            <div className='text-center'>
+            <img className='img-fluid details-img' src={details?.img}></img>
+            <p className='text-center  pb-5 fw-bold text-warning'>Author:{details?.author}</p>
+            </div>
             <p className='p-5'>{details?.details}</p>
             <p className='p-5'>{details?.details}</p>
             <p className='p-5'>{details?.details}</p>

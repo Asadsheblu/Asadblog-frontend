@@ -10,9 +10,9 @@ const addPost=(e)=>{
     
     const name=e.target.name.value
     const details=e.target.details.value
-   
+   const author=e.target.author.value
     const image=e.target.image.files[0]
-    const data={name,details,image}
+    const data={name,details,image,author}
     
     const formData=new FormData()
     formData.append('image',image)
@@ -29,6 +29,7 @@ const addPost=(e)=>{
             const posts={
                 name:name,
                 details:details,
+                author:author,
                 img:img
             }
             fetch('http://localhost:5000/news',{
@@ -70,15 +71,19 @@ return (
 <textarea name='details' className="form-control" id="exampleFormControlTextarea1" rows="7" required></textarea>
 </div>
 
-          <div className="mb-3 mx-auto w-75">
+          <div className="mb-3 w-100">
 
-          <input type="file" name='image' className="form-control w-25 mx-auto"/>  
+          <input type="file" name='image' className="form-control w-50 mx-auto"/>  
           </div>
 
-<div className="mb-3 mx-auto w-75">
-<input type="datetime-local" name="time" className="form-control w-25 mx-auto"></input> 
+<div className="mb-3 w-100">
+<input type="datetime-local" name="time" className="form-control w-50 mx-auto"></input> 
 </div>
+<div className="mb-3 mx-auto  w-75">
+<label for="exampleFormControlInput1" className="form-label">Blog Author</label>
 
+<textarea name='author' className="form-control w-50" id="exampleFormControlTextarea1" rows="1" required></textarea>
+</div>
 <input className="form-control mx-auto w-25 mt-3 rounded bg-primary text-white" type="submit" value="POST" />
 <ToastContainer />
 </form>
