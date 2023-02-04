@@ -4,7 +4,7 @@ import Subscribe from '../Subscribe/Subscribe';
 
 const Home = () => {
     return (
-        <div className='p-5 container-fluid'>
+        <div className='pt-5 container-fluid'>
             <Blog />
           
         </div>

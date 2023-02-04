@@ -32,7 +32,7 @@ const addPost=(e)=>{
                 author:author,
                 img:img
             }
-            fetch('http://localhost:5000/news',{
+            fetch('https://skropay-blog-backend-asadsheblu.onrender.com/news',{
                 method:"POST",
                 headers:{
                     "content-type":"application/json"

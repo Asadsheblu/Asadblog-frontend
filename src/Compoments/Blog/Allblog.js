@@ -9,7 +9,7 @@ const Allblog = () => {
     const [blog,setBlog]=useState([])
   
    useEffect(()=>{
-       fetch('http://localhost:5000/news')
+       fetch('https://skropay-blog-backend-asadsheblu.onrender.com/news')
        .then(res=>res.json())
        .then(data=>{
            setBlog(data)
@@ -25,7 +25,7 @@ const Allblog = () => {
             {
                 blog.map(blogs=>
                    <div className='col-md-4 g-4 pb-3'>
-                        <img className='thumbail-blog' src={blogs?.img}></img>
+                        <img className='thumbail-blog img-fluid' src={blogs?.img}></img>
                         <h2 class="card-title pe-5 pt-2 pb-2">{blogs?.name.slice(0,40)}...</h2>
         <p class="card-text pe-4">{blogs?.details.slice(0,460)}...</p>
         <button onClick={()=>blogdetails(blogs?._id)} className='btn btn-primary rounded-pill ms-auto'>Read More</button>
