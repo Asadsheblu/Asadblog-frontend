@@ -1,6 +1,6 @@
 import React from 'react';
 import Blog from '../Blog/Blog';
-import Subscribe from '../Subscribe/Subscribe';
+
 
 const Home = () => {
     return (
