@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { NavLink, useNavigate, useParams } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 
 import Blogsection from './Blogsection';
-import Details from './Details';
+
 import './Blog.css'
 import Post from './Post';
 import Subscribe from '../Subscribe/Subscribe';
-import Allblog from './Allblog';
+
 
 const Blog = () => {
     const [blog,setBlog]=useState([])
