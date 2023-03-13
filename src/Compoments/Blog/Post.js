@@ -1,27 +1,40 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Calendar2CheckFill, Diagram2, Facebook, Instagram, Linkedin, PinMap, Share, Twitter } from 'react-bootstrap-icons';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Post = ({posts}) => {
-    const {_id,name,details,img,author}=posts
+    const {_id,name,time,img,location,seat}=posts
     const navigate=useNavigate()
    const blogdetails=(id)=>{
      navigate(`/news/${id}`)
    }
     return (
-        <div className='row'>
-        <div className='col-md-5'>
-        <img src={img} className="thumbail"></img>
-        </div>
-        <div className='col-md-7'>
-            <h2 className='fw-bold headline-title'>{name}</h2>
-            <p className='pt-2'>{details.slice(0,500,)}...</p>
-            <div className='d-flex ms-auto'>
-               <p className='fw-bold'>Author:{author}</p>
-               <button onClick={()=>blogdetails(_id)} className='btn btn-primary ms-auto'>Read More</button>
+       
+  <div class="col">
+        <div class="card h-100 shadow rounded">
+        <div class="event-thumb">
+         <img className='img-fluid rounded' src={img} alt="..."/>
+         <div class="event-lavel">
+            <Diagram2/> <span>{seat} Seat</span>
             </div>
+         </div>
+          <div class="card-body">
+            <div className='d-flex da-lo'>
+            <p class="fw-bold"> <Calendar2CheckFill className='text-danger me-1'/>  {time}</p>
+            <p class="fw-bold mx-auto"> <PinMap className='text-danger'/>  {location}</p>
+            </div>
+            <h5 class="event-title"> <Link className='text-decoration-none text-dark' to="/">{name}</Link>  </h5>
+           
+         <div className='d-flex'>
+         <button onClick={()=>blogdetails(_id)} className='btn btn-primary rounded'>Read More</button>
+         <p className='ms-auto'> <Facebook/> <Instagram/> <Linkedin/> <Twitter/> <Share className='text-danger fs-6'/> </p>
+        
+         </div>
+          </div>
+        </div>
         </div>
 
-    </div>
+   
     );
 };
 

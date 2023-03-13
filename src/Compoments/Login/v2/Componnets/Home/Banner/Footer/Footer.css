@@ -1,0 +1,118 @@
+.footer-area {
+    background: #2d373c;
+}
+.footer-area .footer-wrapper {
+    padding: 85px 0 80px;
+    position: relative;
+}
+.footer-area .footer-wrapper .footer-watermark {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.footer-area .footer-widget .footer-widget-title {
+    font-weight: 600;
+    font-size: 25px;
+    color: #fff;
+    padding-bottom: 13px;
+}
+ol, ul {
+    list-style: none!important;
+}
+
+h1, h2, h3, h4, h5, h6, ol, ul {
+    margin: 0;
+    padding: 0;
+}
+.footer-area .footer-widget .footer-links .link-list li a.footer-link {
+    display: inline-block;
+    font-weight: 500;
+    color: #fff;
+    padding: 5px 0 5px 20px;
+    position: relative;
+    transition: all .2s;
+}
+a {
+    text-decoration: none!important;
+}
+a {
+    color: #0d6efd;
+    text-decoration: underline;
+}
+.footer-area .footer-newslatter-wrapper .newslatter-form .newslatter-input-group {
+    height: 55px;
+    margin-top: 40px;
+}
+.footer-area .footer-newslatter-wrapper .newslatter-form .newslatter-input-group input {
+    height: 100%;
+    border-radius: 5px 0 0 5px;
+    background: #fff;
+}
+input {
+    padding: 8px 15px;
+    display: block;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    height: 45px;
+}
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+.footer-area .footer-newslatter-wrapper .newslatter-form .newslatter-input-group button {
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fff;
+    background: #ce1446;
+    border-radius: 0 5px 5px 0;
+    height: 100%;
+    border: none;
+    padding: 0 24px;
+    margin-left: -1px;
+}
+.footer-area .footer-widget .footer-widget-title {
+    font-weight: 600;
+    font-size: 25px;
+    color: #fff;
+    padding-bottom: 13px;
+}
+.footer-area .footer-widget .footer-links .link-list .contact-box {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+.footer-area .footer-bottom {
+    padding: 48px 0;
+    border-top: 1px solid hsla(0,0%,100%,.5);
+}
+.footer-area .footer-bottom .footer-copyright {
+    padding: 12px 0;
+}
+
+.footer-area .footer-widget .footer-links .link-list li a.footer-link {
+    display: inline-block;
+    font-weight: 500;
+    color: #fff;
+    padding: 5px 0 5px 20px;
+    position: relative;
+    transition: all .2s;
+}
+a {
+    text-decoration: none!important;
+}
+
+a {
+    color: #0d6efd;
+    text-decoration: underline;
+}
+.fb{
+    color: #2657c0;
+}

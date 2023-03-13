@@ -10,9 +10,14 @@ const addPost=(e)=>{
     
     const name=e.target.name.value
     const details=e.target.details.value
-   const author=e.target.author.value
+   const location=e.target.location.value
+   const time=e.target.time.value
+   const seat=e.target.seat.value
+   const type=e.target.type.value
+   const speaker=e.target.speaker.value
+   const sponsor=e.target.sponsor.value
     const image=e.target.image.files[0]
-    const data={name,details,image,author}
+    const data={name,details,image,location,time,type,speaker,sponsor}
     
     const formData=new FormData()
     formData.append('image',image)
@@ -29,10 +34,15 @@ const addPost=(e)=>{
             const posts={
                 name:name,
                 details:details,
-                author:author,
+                location:location,
+                time:time,
+                seat:seat,
+                type:type,
+                speaker:speaker,
+                sponsor:sponsor,
                 img:img
             }
-            fetch('https://skropay-blog-backend-asadsheblu.onrender.com/news',{
+            fetch('http://localhost:5000/news',{
                 method:"POST",
                 headers:{
                     "content-type":"application/json"
@@ -77,12 +87,32 @@ return (
           </div>
 
 <div className="mb-3 w-100">
-<input type="datetime-local" name="time" className="form-control w-50 mx-auto"></input> 
+<input type="date" name="time" className="form-control w-50 mx-auto"></input> 
 </div>
 <div className="mb-3 mx-auto  w-75">
-<label for="exampleFormControlInput1" className="form-label">Blog Author</label>
+<label for="exampleFormControlInput1" className="form-label">Add Place</label>
 
-<textarea name='author' className="form-control w-50" id="exampleFormControlTextarea1" rows="1" required></textarea>
+<textarea name='location' className="form-control w-50" id="exampleFormControlTextarea1" rows="1" required></textarea>
+</div>
+<div className="mb-3 mx-auto  w-75">
+<label for="exampleFormControlInput1" className="form-label">Add Seat</label>
+
+<textarea name='seat' className="form-control w-50" id="exampleFormControlTextarea1" rows="1" required></textarea>
+</div>
+<div className="mb-3 mx-auto  w-75">
+<label for="exampleFormControlInput1" className="form-label">Add Event Type</label>
+
+<textarea name='type' className="form-control w-50" id="exampleFormControlTextarea1" rows="1"></textarea>
+</div>
+<div className="mb-3 mx-auto  w-75">
+<label for="exampleFormControlInput1" className="form-label">Add Speaker</label>
+
+<textarea name='speaker' className="form-control w-50" id="exampleFormControlTextarea1" rows="1"></textarea>
+</div>
+<div className="mb-3 mx-auto  w-75">
+<label for="exampleFormControlInput1" className="form-label">Add Sponsor</label>
+
+<textarea name='sponsor' className="form-control w-50" id="exampleFormControlTextarea1" rows="1"></textarea>
 </div>
 <input className="form-control mx-auto w-25 mt-3 rounded bg-primary text-white" type="submit" value="POST" />
 <ToastContainer />

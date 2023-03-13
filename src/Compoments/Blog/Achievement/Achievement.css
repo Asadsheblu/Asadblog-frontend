@@ -1,0 +1,8 @@
+.achievement-area {
+    background: linear-gradient(rgba(45,55,60,.9) 100%,rgba(45,55,60,.9) 0),url(/src/img/achievement-bg.8ce42092.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 88px;
+    padding-bottom: 102px;
+}

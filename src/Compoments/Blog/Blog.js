@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import {  useNavigate } from 'react-router-dom';
 
-import Blogsection from './Blogsection';
-
 import './Blog.css'
 import Post from './Post';
-import Subscribe from '../Subscribe/Subscribe';
 
 
 const Blog = () => {
@@ -15,7 +12,7 @@ const Blog = () => {
         navigate('/blogs')
     }
    useEffect(()=>{
-       fetch('https://skropay-blog-backend-asadsheblu.onrender.com/news')
+       fetch('http://localhost:5000/news')
        .then(res=>res.json())
        .then(data=>{
           
@@ -27,26 +24,19 @@ const Blog = () => {
    
     return (
         <div className='container mt-5'>
-            <h6 className='text-center  headline'>OUR BLOG</h6>
-            <h2 className='text-center fw-bold pb-5 pt-3 ps-5 pe-5  headline-title'>We simply set the state of the code and keep track of the changes.</h2>
-           
+             <h6 className='text-center text-danger'>Events</h6>
+          <h1 className='text-center fw-bold p-3'>POPULAR EVENT</h1>
+          <div class="row row-cols-1 row-cols-md-3 g-4">
           
       {
-        blog.splice(0,1).map(posts=><Post key={posts?._id} posts={posts}/>)
+        blog.splice(0,6).map(posts=><Post key={posts?._id} posts={posts}/>)
         
 
       
+        
       }
-      <div className="shop">
-                        <div className="row row-cols-1 row-cols-md-2 g-4">
-                     
-                    {
-                        blog.slice(0,4).map(bloglists=><Blogsection key={bloglists?._id} bloglists={bloglists}/>)
-                    }
-                        </div>
-                        <Subscribe/>
-                        
-                        </div>
+      </div>
+      
                        <div className='text-end'>
                        <button onClick={handelAllblog} className='btn btn-primary rounded m-3'>Read More Blog</button>  
                        </div>    

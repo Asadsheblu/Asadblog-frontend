@@ -1,0 +1,72 @@
+.speaker-card {
+    margin-top: 24px;
+}
+.speaker-card .speaker-image {
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    position: relative;
+}
+.speaker-card .speaker-image img {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+img {
+    vertical-align: middle;
+}
+.speaker-card .speaker-image .speaker-social-icons {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    bottom: 0;
+}
+ol, ul {
+    list-style: none!important;
+}
+h1, h2, h3, h4, h5, h6, ol, ul {
+    margin: 0;
+    padding: 0;
+}
+dl, ol, ul {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+ol, ul {
+    padding-left: 2rem;
+}
+
+.speaker-card .speaker-image .speaker-social-icons li a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background: #ce1446;
+    transition: all .35s;
+}
+.speaker-card .speaker-image .speaker-social-icons li i {
+    display: block;
+    text-align: center;
+    width: inherit;
+    padding: 0 20px;
+    line-height: 1;
+    color: #fff;
+}
+a {
+    text-decoration: none!important;
+  
+}
+.speaker-card .speaker-info {
+    text-align: center;
+    background: #ce1446;
+    box-shadow: 0 0 15px rgb(45 55 60 / 5%);
+    border-radius: 0 0 5px 5px;
+    color: #fff;
+    padding: 20px;
+}
+.speaker-card .speaker-info .speaker-name {
+    font-weight: 600;
+    font-size: 25px;
+    text-transform: capitalize;
+    color: #fff;
+}

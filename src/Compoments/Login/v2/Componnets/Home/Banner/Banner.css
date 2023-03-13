@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+body{
+    font-family: 'Barlow', sans-serif;
+}
+
+.banner {
+    background: conic-gradient(from 243.17deg at 52.66% 45.72%,rgba(206,20,70,.25) 0deg,hsla(0,0%,100%,0) 66.85deg,rgba(222,95,129,.3) 266.25deg,rgba(206,20,70,.25) 1turn);
+    position: relative;
+    
+}
+.bannert1{
+    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+.bannert2{
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 80px;
+    letter-spacing: 1px;
+}
+
+@media only screen and (max-width: 600px) {
+    .bannert1{
+        font-weight: 600;
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+    .bannert2{
+        font-weight: 800;
+        font-size: 30px;
+        line-height: 40px;
+        letter-spacing: 1px;
+    }
+  }
