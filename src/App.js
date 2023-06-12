@@ -15,6 +15,7 @@ import Speakeradd from './Compoments/Blog/Speakeradd';
 import Speaker from './Compoments/Blog/Speaker';
 import Allspeaker from './Compoments/Blog/Allspeaker';
 import Blog from './Compoments/Blog/Delete/Blog';
+import Notfound from './Compoments/Dashboard/Notfound';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path='/dashBlog' element={<Blog/>}></Route>
         <Route path='/blogs' element={<Allblog/>}></Route>
         <Route path='/speaker' element={<Speaker/>}></Route>
+        <Route path='*' element={<Notfound/>}/>
        </Routes>
     <Footer/>   
     </div>

@@ -7,7 +7,7 @@ import './Speaker.css'
 const Speaker = () => {
   const [speaker,setSpeaker]=useState([])
   useEffect(()=>{
-    fetch('http://localhost:5000/speakers')
+    fetch('https://asadblog-backend.onrender.com/speakers')
     .then(res=>res.json())
     .then(data=>{
         console.log(data);

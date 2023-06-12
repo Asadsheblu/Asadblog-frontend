@@ -15,7 +15,7 @@ const Details = () => {
   });
     const [details,setDetails]=useState({})
     useEffect(()=>{
-        fetch(`http://localhost:5000/news/${Blogid}`)
+        fetch(`https://asadblog-backend.onrender.com/news/${Blogid}`)
         .then(res=>res.json())
         .then(data=>setDetails(data))
     },[])

@@ -3,33 +3,40 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <div className="container-fluid mx-auto">
-          <a className="navbar-brand" href="#">Navbar</a>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/">Home</Link>
-              </li>
-              <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/speaker">About</Link>
-              </li>
-             
-              <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/post">Post</Link>
-              </li>
+      
+      <nav className="navbar left navbar-expand-lg navbar-dark shadow fixed" id="mynav">
+      <div className="container  navbars ">
+          <Link className="text-decoration-none" to="/"><span class="text-primary fw-bold headline text-warning fs-1 logo">
+            Event</span></Link>
               
-            </ul>
-            <form className="d-flex">
-           
-              <button  className="btn btn-outline-success" type="submit"><Link to="login" className='text-decoration-none'>Login</Link></button>
-            </form>
+          <button id="tog" className="navbar-toggler me-3 bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+
+          <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+               <Link className="nav-link active text-dark fw-bold" aria-current="page" to="/">HOME</Link>
+          </li>
+            <li className="nav-item">
+     <Link className="nav-link  text-dark fw-bold" aria-current="page" to="/about">ABOUT</Link>
+            </li>
+            <li className="nav-item">
+     <Link className="nav-link  text-dark fw-bold" aria-current="page" to="/speaker">SPEAKER</Link>
+            </li>
+             
+           <li className="nav-item">
+              <Link className="nav-link text-dark fw-bold" aria-current="page" to="/post">POST</Link>
+            </li>
+              
+          </ul>
+
           </div>
-        </div>
-      </nav>
+      </div>
+
+     
+  </nav>
     );
 };
 

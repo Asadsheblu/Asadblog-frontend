@@ -42,7 +42,7 @@ const addPost=(e)=>{
                 sponsor:sponsor,
                 img:img
             }
-            fetch('http://localhost:5000/news',{
+            fetch('https://asadblog-backend.onrender.com/news/',{
                 method:"POST",
                 headers:{
                     "content-type":"application/json"

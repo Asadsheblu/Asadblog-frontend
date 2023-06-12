@@ -1,4 +1,5 @@
 import React from 'react';
+import CountUp from 'react-countup';
 import icon1 from "../../../img/icon1.png"
 import icon2 from "../../../img/icon2.png"
 import icon3 from "../../../img/icon3.png"
@@ -12,28 +13,28 @@ const Acheivement = () => {
                     <div className='col-md-3'>
                         <div className='text-center'>
                     <img src={icon1} className="img-fluid" />
-                    <h1 className='text-center text-white fw-bold'>100 +</h1>
+                    <h1 className='text-center text-white fw-bold'><CountUp end={100} />+</h1>
                     <h3 className='text-center text-white'>Best Speaker</h3>
                         </div>
                     </div>
                     <div className='col-md-3'>
                         <div className='text-center'>
                     <img src={icon2} className="img-fluid" />
-                    <h1 className='text-center text-white fw-bold'>600 +</h1>
+                    <h1 className='text-center text-white fw-bold'><CountUp end={600} /> +</h1>
                     <h3 className='text-center text-white'>Ideal Event</h3>
                         </div>
                     </div>
                     <div className='col-md-3'>
                         <div className='text-center'>
                     <img src={icon3} className="img-fluid" />
-                    <h1 className='text-center text-white fw-bold'>200 +</h1>
+                    <h1 className='text-center text-white fw-bold'><CountUp end={200} /> +</h1>
                     <h3 className='text-center text-white'>New Schedule</h3>
                         </div>
                     </div>
                     <div className='col-md-3'>
                         <div className='text-center'>
                     <img src={icon4} className="img-fluid" />
-                    <h1 className='text-center text-white fw-bold'>300 +</h1>
+                    <h1 className='text-center text-white fw-bold'><CountUp end={300} /> +</h1>
                     <h3 className='text-center text-white'>New Schedule</h3>
                         </div>
                     </div>

@@ -26,7 +26,7 @@ const Speakeradd = () => {
                 designation:designation,
                 img:img
             }
-            fetch("http://localhost:5000/speakers",{
+            fetch("https://asadblog-backend.onrender.com/speakers",{
                 method:"POST",
                 headers:{
                     "content-type":"application/json"

@@ -12,7 +12,7 @@ const Allblog = () => {
     const [blog,setBlog]=useState([])
   
    useEffect(()=>{
-       fetch('http://localhost:5000/news')
+       fetch('https://asadblog-backend.onrender.com/news')
        .then(res=>res.json())
        .then(data=>{
            setBlog(data)

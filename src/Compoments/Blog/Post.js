@@ -5,9 +5,10 @@ import { Link, useNavigate } from 'react-router-dom';
 const Post = ({posts}) => {
     const {_id,name,time,img,location,seat}=posts
     const navigate=useNavigate()
-   const blogdetails=(id)=>{
-     navigate(`/news/${id}`)
-   }
+   
+    const blogdetails=(id)=>{
+      navigate(`/news/${id}`)
+    }
     return (
        
   <div class="col">
